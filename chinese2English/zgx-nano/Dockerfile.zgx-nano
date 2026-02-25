@@ -1,0 +1,31 @@
+FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04
+
+# 系統依賴
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3 \
+    python3-pip \
+    python3-venv \
+    libasound2-dev \
+    portaudio19-dev \
+    libopenblas-dev \
+    build-essential \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Python 依賴
+COPY requirements-server.txt .
+RUN pip3 install --no-cache-dir -r requirements-server.txt
+
+# 複製程式碼
+COPY server/ server/
+COPY shared/ shared/
+
+# 健康檢查端點
+HEALTHCHECK --interval=30s --timeout=10s --retries=3 --start-period=120s \
+    CMD curl -f http://localhost:8000/health || exit 1
+
+EXPOSE 8000
+
+ENTRYPOINT ["python3", "-m", "server.main"]

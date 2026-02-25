@@ -13,7 +13,7 @@ HP_ZGX_Nano_Application/
 │   ├── zgx-nano/             # ZGX Nano 專用配置
 │   └── tests/                # 9 個測試檔案
 │
-├── vocabulary/               # 英語遊戲學習平台（設計完成）
+├── vocabulary/               # 英語遊戲學習平台（設計完成 需要實做）
 │   ├── games/                # 32 款遊戲設計
 │   ├── stories/              # 32 篇故事
 │   ├── scenarios/            # 32 個場景

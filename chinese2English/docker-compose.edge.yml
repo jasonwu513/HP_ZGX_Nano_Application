@@ -1,0 +1,23 @@
+services:
+  edge:
+    build:
+      context: .
+      dockerfile: Dockerfile.edge
+    image: c2e-edge
+    volumes:
+      - ./models:/app/models
+      - ./edge:/app/edge
+      - ./shared:/app/shared
+      - ./output:/app/output
+      - ./.env:/app/.env:ro
+      # PulseAudio socket — 讓容器透過宿主機音訊系統播放/錄音
+      - /run/user/1000/pulse:/run/user/1000/pulse
+      - ~/.config/pulse/cookie:/root/.config/pulse/cookie:ro
+    environment:
+      - PULSE_SERVER=unix:/run/user/1000/pulse/native
+    devices:
+      - /dev/snd:/dev/snd
+    group_add:
+      - audio
+    network_mode: none
+    restart: unless-stopped

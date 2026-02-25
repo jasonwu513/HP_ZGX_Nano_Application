@@ -1,0 +1,10 @@
+fastapi>=0.115
+uvicorn[standard]>=0.34
+pydantic-settings>=2.7
+torch>=2.5
+transformers>=4.48
+librosa>=0.10
+qwen-asr>=0.0.6
+piper-tts>=1.2.0
+edge-tts>=6.1
+pydub>=0.25

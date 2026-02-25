@@ -1,0 +1,9 @@
+sherpa-onnx>=1.10
+llama-cpp-python>=0.3
+piper-tts>=1.2.0
+sounddevice>=0.5
+numpy>=1.26
+pydantic-settings>=2.7
+opencc-python-reimplemented>=0.1.7
+kaldi-native-fbank>=1.22
+soundfile>=0.12

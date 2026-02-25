@@ -1,0 +1,10 @@
+models/
+.venv/
+.git/
+server/
+client/
+tests/
+vendor/
+__pycache__/
+*.pyc
+.env

@@ -1,7 +1,3 @@
-# Sub-project repos (managed independently)
-chinese2English/
-vocabulary/
-
 # Python
 __pycache__/
 *.pyc
