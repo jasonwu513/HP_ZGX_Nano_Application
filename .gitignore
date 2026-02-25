@@ -1,0 +1,22 @@
+# Sub-project repos (managed independently)
+chinese2English/
+vocabulary/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Models (too large for git)
+models/
+
+# Generated results
+results/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
