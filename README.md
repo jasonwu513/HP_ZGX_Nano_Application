@@ -13,7 +13,7 @@ HP_ZGX_Nano_Application/
 │   ├── zgx-nano/             # ZGX Nano 專用配置
 │   └── tests/                # 9 個測試檔案
 │
-├── vocabulary/               # 英語遊戲學習平台（設計完成 需要實做）
+├── vocabulary/               # 英語遊戲學習平台（設計完成 待實做）
 │   ├── games/                # 32 款遊戲設計
 │   ├── stories/              # 32 篇故事
 │   ├── scenarios/            # 32 個場景
@@ -94,7 +94,7 @@ PYTHONPATH=. python -m pytest tests/ -v
 
 | 元件 | 用量 |
 |------|------|
-| Qwen3-ASR-0.6B FP16 | ~1.5GB |
+| Qwen3-ASR-0.6B FP16 | ~1.5GB | or Qwen3-ASR-1.7B 
 | Qwen3-30B FP16 | ~60GB |
 | CosyVoice2-0.5B | ~3GB |
 | Flux.1-schnell | ~16-22GB |
