@@ -1,12 +1,24 @@
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+dist/
+build/
 .venv/
+venv/
+
+# Environment (may contain secrets)
+.env
 
 # Models (too large for git)
 models/
 
-# Generated results
+# Audio files
+*.wav
+*.mp3
+
+# Generated output
+output/
 results/
 
 # OS
@@ -16,3 +28,6 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# Test cache
+.pytest_cache/
